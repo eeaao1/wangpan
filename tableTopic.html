@@ -1,0 +1,306 @@
+<html>
+	<head>
+		<title>tableTopic</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
+	</head>
+	<script>
+		var guys = new Array("Cheng Shuo", "Chi Jinsong", "Du Junjie", "Fan Dan", "Fan Tingting", "Fang Bobo", 
+				"Fu Kaikai", "Jiang Mengsha", "Pan Weifan", "Ruan Tianbo", "Shen Lei", "Tao Yuejie",  "Weng Fengjiao",  "Weng Ruoxu", 
+				"Wu Xuan", "Xu Boda", "Yan Yingying",  "Yang Gang", "Yang Xuze", "Zhang Xiaoyan", "Zhou Xiaoyu", "Zhu Guangmao");
+		var gg = 22;		
+		function comeon(){
+			var now=new Date();
+			
+			var rr = now.getSeconds()%gg;
+			if (gg <= 0) {
+				document.getElementById("ren").innerHTML = "nobody";
+			} else {
+				if (guys[rr] != "") {
+				console.log("rr="+rr);
+					document.getElementById("ren").innerHTML = guys[rr];
+					gg--;
+					guys.splice(rr,1);
+				} else {
+					comeon();
+				}
+			}
+		}
+		
+		function comeons() {
+			var now=new Date();
+			alert(now.getSeconds()%3);
+		}
+		
+		function toq2() {
+			document.getElementById("question1").style.display = "none";
+			document.getElementById("question2").style.display = "block";
+		}
+		
+		function toq3() {
+			document.getElementById("question2").style.display = "none";
+			document.getElementById("question3").style.display = "block";
+		}
+		function toq4() {
+			document.getElementById("question3").style.display = "none";
+			document.getElementById("question4").style.display = "block";
+		}
+		function toq5() {
+			document.getElementById("question4").style.display = "none";
+			document.getElementById("question5").style.display = "block";
+		}
+		function toq6() {
+			document.getElementById("question5").style.display = "none";
+			document.getElementById("question6").style.display = "block";
+		}
+
+
+		function bto5(son) {
+			document.getElementById("question6").style.display = "none";
+			document.getElementById("question5").style.display = "block";
+		}
+		function bto4(son) {
+			document.getElementById("question5").style.display = "none";
+			document.getElementById("question4").style.display = "block";
+		}
+		function bto3(son) {
+			document.getElementById("question4").style.display = "none";
+			document.getElementById("question3").style.display = "block";
+		}
+		function bto2(son) {
+			document.getElementById("question3").style.display = "none";
+			document.getElementById("question2").style.display = "block";
+		}
+		function bto1(son) {
+			document.getElementById("question2").style.display = "none";
+			document.getElementById("question1").style.display = "block";
+		}
+		
+		function cback (son) {
+			son.parentNode.style.display = "none";
+			document.getElementById("question3").style.display = "block";		
+		}
+		
+		function renyi(){
+			document.getElementById("question3").style.display = "none";
+			document.getElementById("renyi").style.display = "block";
+		}
+		function shijian(){
+			document.getElementById("question3").style.display = "none";
+			document.getElementById("shijian").style.display = "block";
+		}
+		function yinshen(){
+			document.getElementById("question3").style.display = "none";
+			document.getElementById("yinshen").style.display = "block";
+		}
+		function fangda(){
+			document.getElementById("question3").style.display = "none";
+			document.getElementById("fangda").style.display = "block";
+		}
+		function chengshi(){
+			document.getElementById("question3").style.display = "none";
+			document.getElementById("chengshi").style.display = "block";
+		}
+		function qiubi(){
+			document.getElementById("question3").style.display = "none";
+			document.getElementById("qiubi").style.display = "block";
+		}
+		
+		
+		
+		
+		
+		function d(){
+			alert();
+		}
+	</script>
+	
+	<style type="text/css">
+		#question2, #question3, #question4, #question5, #question6, #renyi, #shijian, #yinshen, #fangda, #chengshi, #qiubi{
+			text-align:center;
+			width:100%;
+			display:none;
+		}
+		
+		#question1, #t{
+			text-align:center;
+			width:100%;
+		}
+		
+		#question2  {
+			
+			
+		
+		}
+		#question3 img {
+			width: 369px;
+			height: 300px;
+		}
+		
+	</style>
+	<body>
+	<div id="t" style="width: 100%;
+    height: 1500;
+    margin: 0,0,0,0;
+    background-color: #0ec2ea;">
+	<div><font id ="ren" size='10'>??????????????</font>
+		<input id="a" type="button" value="who?" onClick="comeon()"/>
+	</div>
+			<div id="question1">
+				<img src="images/first.jpg"/>
+				</br>
+				</br>
+				</br>
+				<font size='10'>Did you fancy that Doraemon(哆啦A梦) is your friend?</font>
+				</br>
+				<input id="a" type="button" value="next" onClick="toq2()"/>
+			</div>
+			</br>
+				</br>
+				</br>
+				</br>
+				</br>
+				
+				
+			<div id="question2">
+				<img src="images/second.gif"/>
+				</br>
+				</br>
+				</br>
+				<font size='10'>If Doraemon(哆啦A梦) is your friend, what do you want to do?</font>
+				</br>
+				<input id="a" type="button" value="back" onClick="bto1()"/>
+				<input id="a" type="button" value="next" onClick="toq3()"/>
+			</div>
+			
+			
+			<div id="question3">
+			
+				<font size='10'>Now You can only choose one prop,and the prop will be limited.</br>
+									So which do you want? And what would you do with it?</font>
+				</br>
+				</br>
+				
+				<div>
+					<img src="images/ch_renyi.jpg" onClick="renyi()" />
+					
+					<img src="images/ch_shijian.jpg" onClick="shijian()"/>
+					<br>
+					<img src="images/ch_yinshen.jpg" onClick="yinshen()"/>
+					<img src="images/ch_fangda.jpg" onClick="fangda()"/>
+					<br>
+					<img src="images/ch_chengshi.jpg" onClick="chengshi()"/>
+					<img src="images/ch_qiubi.jpg" onClick="qiubi()"/>
+				</br><font size='5'>-------------诚实丸----------------</font><font size='5'>------------------丘比特之箭------------------</font>
+				</div>
+				</br>
+				</br>
+				<input id="a" type="button" value="back" onClick="bto2()"/>
+				<input id="a" type="button" value="next" onClick="toq4()"/>
+			</div>
+			
+			
+			<div id="question4">
+				<img src="images/q4.jpg"/>
+				</br>
+				</br>
+				</br>
+				<font size='10'>Do you think some people who like(像) daxiong(大熊) are happy? why?</font>
+				</br>
+				<input id="a" type="button" value="back" onClick="bto3()"/>
+				<input id="a" type="button" value="next" onClick="toq5()"/>
+			</div>
+			</br>
+		
+				
+			<div id="question5">
+				<img src="images/q5.jpg"/>
+			</br>
+				</br>
+				</br>
+				</br>
+				<font size='10'>what do you think some people who like(像) Doraemon(哆啦A梦) what else them expect?</font>
+				</br>
+				<input id="a" type="button" value="back" onClick="bto4()"/>
+				<input id="a" type="button" value="next" onClick="toq6()"/>
+			</div>
+			</br>
+			
+			
+			<div id="question6">
+				<img src="images/q6.jpg"/>
+				</br>
+				</br>
+				</br>
+				<font size='10'>If your Doraemon(哆啦A梦) leave you, what will you do, what will you become like?</font>
+				</br>
+				<input id="a" type="button" value="back" onClick="bto5()"/>
+			</div>
+			
+			
+		
+			
+			
+			
+			
+			
+			
+			<div id="renyi">
+				<img src="images/ch_renyi.jpg"/>
+				</br>
+				</br>
+				</br>
+				<font size='10'>If you have the Random door(任意门),but you can not change the place which be connected.</font>
+				</br>
+				<input id="a" type="button" value="back" onClick="cback(this)"/>
+			</div>
+			
+			<div id="shijian">
+				<img src="images/ch_shijian.jpg"/>
+				</br>
+				</br>
+				</br>
+				<font size='10'>If you have the Time stopper(时间停止器),but it can only Stop for 5 minutes every day.</font>
+				</br>
+				<input id="a" type="button" value="back" onClick="cback(this)"/>
+			</div>
+			
+			<div id="yinshen">
+				<img src="images/ch_yinshen.jpg"/>
+				</br>
+				</br>
+				</br>
+				<font size='10'>If you have the invisible cloak(隐身斗篷),it is without limits.</font>
+				</br>
+				<input id="a" type="button" value="back" onClick="cback(this)"/>
+			</div>
+			
+			<div id="fangda">
+				<img src="images/ch_fangda.jpg"/>
+				</br>
+				</br>
+				</br>
+				<font size='10'>If you have the (放大灯),but it can be used once.</br>(something become bigger which be irradiated(照射))</font>
+				</br>
+				<input id="a" type="button" value="back" onClick="cback(this)"/>
+			</div>
+			<div id="chengshi">
+				<img src="images/ch_chengshi.jpg"/>
+				</br>
+				</br>
+				</br>
+				<font size='10'>If you have the (诚实丸),but you can only get one.</br>(someone only tell the truth who eat it.)</font>
+				</br>
+				<input id="a" type="button" value="back" onClick="cback(this)"/>
+			</div>
+			<div id="qiubi">
+				<img src="images/ch_qiubi.jpg"/>
+				</br>
+				</br>
+				</br>
+				<font size='10'>If you have the (丘比特之箭).</br>(someone will love you who be shot by you.)</font>
+				</br>
+				<input id="a" type="button" value="back" onClick="cback(this)"/>
+			</div>
+			</div>
+	</body>
+</html>
